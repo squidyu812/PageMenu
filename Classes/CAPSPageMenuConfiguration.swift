@@ -35,6 +35,8 @@ public class CAPSPageMenuConfiguration {
     open var enableHorizontalBounce : Bool = true
     open var hideTopMenuBar : Bool = false
     
+    open var selectionIndicatorImage: UIImage? = nil
+    
     public init() {
         
     }

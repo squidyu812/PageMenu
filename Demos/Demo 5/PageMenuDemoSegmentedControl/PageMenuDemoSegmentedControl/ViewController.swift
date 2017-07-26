@@ -26,21 +26,21 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
         
         let controller1 : TestTableViewController = TestTableViewController(nibName: "TestTableViewController", bundle: nil)
         controller1.parentNavigationController = self.navigationController
-        controller1.title = "FAVORITES"
+        controller1.title = "最新消息"
         controllerArray.append(controller1)
         
         let controller2 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
-        controller2.title = "RECENTS"
+        controller2.title = "門市訊息"
         controller2.parentNavigationController = self.navigationController
         controllerArray.append(controller2)
         
         let controller3 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
-        controller3.title = "FRIENDS"
+        controller3.title = "食品安全"
         controller3.parentNavigationController = self.navigationController
         controllerArray.append(controller3)
         
         let controller4 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
-        controller4.title = "OTHERS"
+        controller4.title = "個人訊息"
         controller4.parentNavigationController = self.navigationController
         controllerArray.append(controller4)
         
@@ -50,16 +50,18 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
             .scrollMenuBackgroundColor(UIColor.white),
             .viewBackgroundColor(UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)),
             .bottomMenuHairlineColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 0.1)),
-            .selectionIndicatorColor(UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)),
+            .selectionIndicatorColor(UIColor.clear),
             .menuMargin(20.0),
             .menuHeight(40.0),
             .selectedMenuItemLabelColor(UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)),
             .unselectedMenuItemLabelColor(UIColor(red: 40.0/255.0, green: 40.0/255.0, blue: 40.0/255.0, alpha: 1.0)),
-            .menuItemFont(UIFont(name: "HelveticaNeue-Medium", size: 14.0)!),
+            .menuItemFont(UIFont(name: "PingFangTC-Medium", size: 15.0)!),
             .useMenuLikeSegmentedControl(true),
             .menuItemSeparatorRoundEdges(true),
-            .selectionIndicatorHeight(2.0),
-            .menuItemSeparatorPercentageHeight(0.1)
+            .selectionIndicatorHeight(8.0),
+            .menuItemSeparatorPercentageHeight(0.1),
+            .menuItemSeparatorColor(UIColor.clear),
+            .selectionIndicatorImage(UIImage(named: "SelectionIndicator")!)
         ]
         
         // Initialize scroll menu

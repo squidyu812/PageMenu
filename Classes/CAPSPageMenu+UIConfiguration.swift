@@ -60,6 +60,8 @@ extension CAPSPageMenu {
                 configuration.centerMenuItems = value
             case let .hideTopMenuBar(value):
                 configuration.hideTopMenuBar = value
+            case let .selectionIndicatorImage(image):
+                configuration.selectionIndicatorImage = image
             }
         }
         
@@ -243,8 +245,12 @@ extension CAPSPageMenu {
                 selectionIndicatorFrame = CGRect(x: configuration.menuMargin, y: configuration.menuHeight - configuration.selectionIndicatorHeight, width: configuration.menuItemWidth, height: configuration.selectionIndicatorHeight)
             }
         }
-        
-        selectionIndicatorView = UIView(frame: selectionIndicatorFrame)
+        if let image = configuration.selectionIndicatorImage {
+            selectionIndicatorView = UIImageView(image: image)
+        } else {
+            selectionIndicatorView = UIImageView()
+        }
+        selectionIndicatorView.frame = selectionIndicatorFrame
         selectionIndicatorView.backgroundColor = configuration.selectionIndicatorColor
         menuScrollView.addSubview(selectionIndicatorView)
     }

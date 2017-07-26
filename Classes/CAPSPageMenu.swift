@@ -44,7 +44,7 @@ open class CAPSPageMenu: UIViewController {
     var startingMenuMargin : CGFloat = 0.0
     var menuItemMargin : CGFloat = 0.0
 
-    var selectionIndicatorView : UIView = UIView()
+    var selectionIndicatorView : UIImageView = UIImageView()
 
     public var currentPageIndex : Int = 0
     var lastPageIndex : Int = 0
