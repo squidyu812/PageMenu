@@ -49,7 +49,7 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
             .menuItemSeparatorWidth(4.3),
             .scrollMenuBackgroundColor(UIColor.white),
             .viewBackgroundColor(UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)),
-            .bottomMenuHairlineColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 0.1)),
+            .bottomMenuHairlineColor(UIColor.clear),
             .selectionIndicatorColor(UIColor.clear),
             .menuMargin(20.0),
             .menuHeight(40.0),
